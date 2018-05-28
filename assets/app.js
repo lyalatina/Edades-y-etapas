@@ -1,7 +1,7 @@
 window.onload = () => {
 
 
-  let age = parseInt(prompt('¿Cuál es tu edad?'));
+    let age = parseInt(prompt('¿Cuál es tu edad?'));
   
      
      const mensajeUno = 'Eres un Toddler';
@@ -10,35 +10,42 @@ window.onload = () => {
      const mensajeCuatro = 'Eres un Teen';
      const mensajeCinco = 'Eres un Young Adult';
   
-        
-       if (age <= 3) {
-        return console.log(mensajeUno);
+     if (age % 1 !== 0 || age === "0" || age === NaN || age === null) {
+      alert("Error, ingresa tu edad de nuevo");
+
+
+      //Todller: 1-3 yrs.
+
+      } else if (age >= 1 && age <= 3 ) {
+
+        return document.write(mensajeUno);
   
-      }
-        //Preschool: 3-5 yrs.
-       if (age <= 5) {
-        return console.log(mensajeDos);
-       
       
-      }
+        //Preschool: 3-5 yrs.
+      } else if (age >= 3 && age <= 5) {
+        return document.write(mensajeDos);
+       
 
          //Gradeschooler: 5-12 yrs.
-        if (age <= 12) {
-        return console.log(mensajeTres);
-      }
+      } else if (age >= 5 && age <= 12 ) {
+        return document.write(mensajeTres);
+      
   
         //Teen: 12-18 yrs.
-        if (age <= 18) {
-        return console.log(mensajeCuatro);
+      } else if (age >= 12 && age <= 18) {
+        return document.write(mensajeCuatro);
     
-      }
+      
         //Young Adult: 18-21 yrs.
-        if (age <= 21) {
-          return console.log(mensajeCinco);
+      } else if (age >= 18 && age <= 21) {
+          return document.write(mensajeCinco);
 
-        
-  
-    }
-  }
 
-       
+      }
+
+
+      }
+    
+      
+
+    
